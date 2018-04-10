@@ -34,11 +34,9 @@
 
         </Grid>
 
-        <ScrollViewer VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Border BorderBrush="Aqua" BorderThickness="5" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Grid Name="Escenario" />
-            </Border>
-        </ScrollViewer>
+
+        <Canvas Name="CanvasEscenario" Width="792"  Height="384" Margin="0,19,0,0" Grid.RowSpan="2"/>        
+
 
         <TextBlock Grid.Row="2">
             <Run>Iteraciones: </Run>
