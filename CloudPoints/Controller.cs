@@ -1,8 +1,5 @@
 ﻿using CloudPoints.Clases;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 
@@ -34,11 +31,10 @@ namespace CloudPoints
             await Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => GUI.InitEnvironment(e)), DispatcherPriority.Background);
         }
 
-
-
-
-
-
-
+        internal async void getNxN()
+        {
+            Punto[] result =  escenario.getNxN();
+            await Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => GUI.PaintResult(result)), DispatcherPriority.Background);
+        }
     }
 }

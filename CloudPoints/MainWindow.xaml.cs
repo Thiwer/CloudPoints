@@ -37,7 +37,7 @@ namespace CloudPoints
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             controller = new Controller(200, this);
-            await controller.Init(CanvasEscenario.Width, CanvasEscenario.Height);
+            await controller.Init(CanvasEscenario.ActualWidth, CanvasEscenario.ActualHeight);
         }
 
         private void PointsNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -54,8 +54,8 @@ namespace CloudPoints
 
         public void InitEnvironment(Escenario e)
         {
-            CanvasEscenario.Children.Clear();
 
+            CanvasEscenario.Children.Clear();
 
             PointCollection pointsCol = new PointCollection();
 
@@ -72,18 +72,42 @@ namespace CloudPoints
                 CanvasEscenario.Children.Add(currentDot);
             }
 
-            
-            
         }
+
+        public void PaintResult(Punto[] result)
+        {
+            foreach (Punto punto in result)
+            {
+                Ellipse currentDot = new Ellipse();
+                currentDot.Stroke = new SolidColorBrush(Colors.Red);
+                currentDot.StrokeThickness = 3;
+                Canvas.SetZIndex(currentDot, 3);
+                currentDot.Height = 5;
+                currentDot.Width = 5;
+                currentDot.Fill = new SolidColorBrush(Colors.Red);
+                currentDot.Margin = new Thickness(punto.X, punto.Y, 0, 0); // Sets the position.
+                CanvasEscenario.Children.Add(currentDot);
+            }
+        }
+
 
         private void NxN_Click(object sender, RoutedEventArgs e)
         {
-
+            controller.getNxN();
         }
 
         private void NxlogN_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void PointsNumber_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                controller = new Controller(Convert.ToInt32(PointsNumber.Text), this);
+                await controller.Init(CanvasEscenario.ActualWidth, CanvasEscenario.ActualHeight);
+            }
         }
     }
 }

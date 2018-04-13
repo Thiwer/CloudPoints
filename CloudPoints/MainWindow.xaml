@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CloudPoints"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="529.339" Width="1016.942">
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -20,7 +20,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox x:Name="PointsNumber" Text="200" PreviewTextInput="PointsNumber_PreviewTextInput"/>
+                <TextBox x:Name="PointsNumber" Text="200" PreviewTextInput="PointsNumber_PreviewTextInput" KeyDown="PointsNumber_KeyDown"/>
             </StackPanel>
 
             <Grid Grid.Column="1">
@@ -35,7 +35,7 @@
         </Grid>
 
 
-        <Canvas Name="CanvasEscenario" Width="792"  Height="384" Margin="0,19,0,0" Grid.RowSpan="2"/>        
+        <Canvas Name="CanvasEscenario" Margin="10,5,10,10" Grid.Row="1"/>
 
 
         <TextBlock Grid.Row="2">
