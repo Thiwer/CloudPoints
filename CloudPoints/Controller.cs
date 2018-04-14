@@ -33,8 +33,19 @@ namespace CloudPoints
 
         internal async void getNxN()
         {
-            Punto[] result =  escenario.getNxN();
-            await Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => GUI.PaintResult(result)), DispatcherPriority.Background);
+            Punto[] result = escenario.getNxN();
+            await Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => GUI.PaintResult(result, "NxN")), DispatcherPriority.Background);
         }
+
+
+        internal async void getNxlogN()
+        {
+            Punto[] result = escenario.getNxlogN();
+            await Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => GUI.PaintResult(result, "NxlogN")), DispatcherPriority.Background);
+        }
+
+
+
+
     }
 }

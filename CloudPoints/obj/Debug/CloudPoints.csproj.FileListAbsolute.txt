@@ -12,3 +12,4 @@ C:\Users\danir\source\repos\CloudPoints\CloudPoints\obj\Debug\CloudPoints.csproj
 C:\Users\danir\source\repos\CloudPoints\CloudPoints\obj\Debug\CloudPoints.csproj.CoreCompileInputs.cache
 C:\Users\danir\source\repos\CloudPoints\CloudPoints\obj\Debug\CloudPoints.exe
 C:\Users\danir\source\repos\CloudPoints\CloudPoints\obj\Debug\CloudPoints.pdb
+C:\Users\danir\source\repos\CloudPoints\CloudPoints\obj\Debug\CloudPoints.csprojResolveAssemblyReference.cache

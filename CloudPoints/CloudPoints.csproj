@@ -64,6 +64,8 @@
     </Compile>
     <Compile Include="Clases\Escenario.cs" />
     <Compile Include="Clases\Punto.cs" />
+    <Compile Include="Clases\QuickSort3.cs" />
+    <Compile Include="Clases\Segment.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

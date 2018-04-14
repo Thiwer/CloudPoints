@@ -74,10 +74,13 @@ namespace CloudPoints
 
         }
 
-        public void PaintResult(Punto[] result)
+        public void PaintResult(Punto[] result, string algorythm)
         {
+            Console.WriteLine(algorythm);
+            Console.WriteLine(Escenario.distancia(result[0], result[1]));
             foreach (Punto punto in result)
             {
+                Console.WriteLine(punto.ToString());
                 Ellipse currentDot = new Ellipse();
                 currentDot.Stroke = new SolidColorBrush(Colors.Red);
                 currentDot.StrokeThickness = 3;
@@ -98,7 +101,7 @@ namespace CloudPoints
 
         private void NxlogN_Click(object sender, RoutedEventArgs e)
         {
-
+            controller.getNxlogN();
         }
 
         private async void PointsNumber_KeyDown(object sender, KeyEventArgs e)
